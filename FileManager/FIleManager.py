@@ -106,7 +106,7 @@ async def read_users_me(current_user:str = Depends(get_current_user)):
 
 @app.post("/register")
 def register(username: str = Form(...), password: str = Form(...)):
-    if user.find_one({username:username}):
+    if user.find_one({"username":username}):
         raise HTTPException(status_code=400, detail="Username already exists")
     hashed_password = get_password_hash(password)
     user.insert_one({"username": username, "hashed_password": hashed_password})
