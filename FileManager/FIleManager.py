@@ -17,7 +17,7 @@ import pyautogui
 import numpy as np
 import math
 
-uri = "mongodb://localhost:27017/"
+uri = "mongoURL"
 client = MongoClient(uri)
 database = client.server
 files = database.file
