@@ -8,7 +8,7 @@ import uvicorn
 from fastapi.middleware.cors import CORSMiddleware
 from pymongo import MongoClient
 
-uri = "mongodb://localhost:27017/"
+uri = "mongourl"
 client = MongoClient(uri)
 database = client.todo
 movies = database.todo
