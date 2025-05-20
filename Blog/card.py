@@ -14,7 +14,7 @@ import pyautogui
 import numpy as np
 import math
 
-url = "mongodb://localhost:27017/"
+url = "MongoURL"
 client = MongoClient(url)
 database = client.server
 blog = database.todo
